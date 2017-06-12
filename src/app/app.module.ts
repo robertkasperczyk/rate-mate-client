@@ -11,6 +11,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 
 const appRoutes: Routes = [
+  {path: '', component: ProductsComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'product/:id', component: ProductDetailComponent},
 ];
