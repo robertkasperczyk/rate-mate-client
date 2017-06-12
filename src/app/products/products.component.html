@@ -1,4 +1,4 @@
-<div class="panel product-container" *ngFor="let product of products">
+<div class="panel product-container" (click)="onProductClicked(i)" *ngFor="let product of products, let i = index">
   <img [src]="product.imagePath">
   {{product.name}}
 </div>

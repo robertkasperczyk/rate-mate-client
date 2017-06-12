@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import "rxjs/add/operator/map";
 import {Product} from "./product";
+import {Router} from "@angular/router"
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -10,7 +11,7 @@ import {Product} from "./product";
 export class ProductsComponent implements OnInit {
   products: Array<Product>;
 
-  constructor(private http: Http) {
+  constructor(private http: Http, private router: Router) {
     http.get('http://localhost:3000/products')
       .map(res => res.json())
       .subscribe(data => {
@@ -19,9 +20,14 @@ export class ProductsComponent implements OnInit {
         },
         err => console.log(err),
         () => console.log('success'));
+
   }
 
   ngOnInit() {
+  }
+
+  onProductClicked(index) {
+    this.router.navigate(["/product", this.products[index]._id]);
   }
 
 }
