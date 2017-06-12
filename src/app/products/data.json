@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "592f3e62de0aa10c927fcf9c",
+    "name": "Pipore Especial",
+    "description": "Pipore is the main brand of the Santo Pipo plantation located in the Argentine province of Misiones. Pipore Especial is a classic Argentinean yerba. Dry mainly consists of thickly cut leaves, a small amount of dust, as well as large twigs. The Especial version is characterized by specially selected, and longer aging sun dried. Its taste and performance is much more intense than Pipore's palo version. Pipore Especial is an excellent choice for Argentinean classics fans!",
+    "imagePath": "uploads/Pipore Especial.png",
+    "powerRating": 3,
+    "dustRating": 4,
+    "tasteRating": 2,
+    "numberOfRatings": 1,
+    "__v": 0
+  },
+  {
+    "_id": "592f3bbc992b6d78aba2c58d",
+    "name": "Amanda con palo",
+    "description": "Amanda is a representative brand of La Cachuer plantation established by Polish immigrants in Argentina. Palo version is not very shredded dandelion composed of large pieces of twigs and leaves. Just cut thick and little dust - it will not trouble preparing even the novices. Classic yerba mate aroma resembles smoke from a bonfire and fresh hay. The taste is light bitter, rather smoky, generally pleasant. Moderate, rather mild. Tasty yerba every day.",
+    "imagePath": "uploads/Amanda con palo.png",
+    "powerRating": 5,
+    "dustRating": 5,
+    "tasteRating": 3,
+    "numberOfRatings": 1,
+    "__v": 0
+  },
+  {
+    "_id": "592f3bee992b6d78aba2c58e",
+    "name": "Rosamonte Seleccion Especial",
+    "description": "Rosamonte Seleccion Especial is a unique version of this Argentinian classic. Before packing, the leaves were aged for about 2 years, which made them particularly gentle in flavor. The leaves consist mainly of thickly cut leaves and twigs and a small amount of dust. The taste is definitely weak, maybe slightly smoky-sour. Suitable for repeated brewing because it lasts for a long time. This version of Rosamonte is ideal for people who have never had a yerba mate.",
+    "imagePath": "uploads/Rosamonte Seleccion Especial.png",
+    "powerRating": 1,
+    "dustRating": 1,
+    "tasteRating": 1,
+    "numberOfRatings": 0,
+    "__v": 0
+  },
+  {
+    "_id": "592f3c02992b6d78aba2c58f",
+    "name": "FeDe Rico",
+    "description": "FEDE Rico Organica is a classic yerba mate from Paraguay, which, despite appearances, is very strong (the first flavors in the taste are rather mild, but with time it takes on character). Dried mainly consists of large quantities of dust, large twigs and a small number of leaves. The taste is bitter, slightly smoky. In addition, it swells greatly, it can increase its volume even twice. Ideal for large dishes. We recommend it for experienced people, accustomed to the strong taste of classic paraguayan yerba.",
+    "imagePath": "uploads/FeDe Rico.png",
+    "powerRating": 1,
+    "dustRating": 1,
+    "tasteRating": 1,
+    "numberOfRatings": 0,
+    "__v": 0
+  },
+  {
+    "_id": "592f3c15992b6d78aba2c590",
+    "name": "Canarias",
+    "description": "Canarias is the most famous Uruguayan yerba mate brand. It is a yerba variety of TIPO PU1, which is very finely ground leaves with a small addition of fine twigs. Strongly dusty. Thanks to the proper processing process, its leaves are more vivid-green than in other mates. Strong in action, with a rather delicate taste. Pleasant aroma resembles a freshly mown meadow with floral notes. There is also a light, smoky aroma. Canarias recommend especially those who do not like the bitter bitterness in yerba and need a strong stimulation. Particular caution should be exercised when brewing to avoid blocking the bombs.",
+    "imagePath": "uploads/Canarias.png",
+    "powerRating": 1,
+    "dustRating": 1,
+    "tasteRating": 1,
+    "numberOfRatings": 0,
+    "__v": 0
+  },
+  {
+    "_id": "592f3c25992b6d78aba2c591",
+    "name": "Amanda Despalada",
+    "description": "Amanda is a representative brand of La Cachuer plantation established by Polish immigrants in Argentina. Amanda Despalada is a typical representative of argentinian mate sin palo (without twigs) - contains up to 5% of small sticks. In addition, the dough consists of thickly cut holly leaves, with a small amount of dust. Smellable aromas and fresh marmalade. Also in the taste we will find a composition of this type with light, pleasant bitterness. This is a fairly mild mate with a good potency. It will look both at the beginning of the adventure adventures as well as for connoisseurs mat. Great also for large dishes because of the severely dried dough.",
+    "imagePath": "uploads/Amanda Despalada.png",
+    "powerRating": 1,
+    "dustRating": 1,
+    "tasteRating": 1,
+    "numberOfRatings": 0,
+    "__v": 0
+  }
+]

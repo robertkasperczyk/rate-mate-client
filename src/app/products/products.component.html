@@ -1,3 +1,4 @@
-<p>
-  products works!
-</p>
+<div class="panel product-container" *ngFor="let product of products">
+  <img [src]="product.imagePath">
+  {{product.name}}
+</div>
