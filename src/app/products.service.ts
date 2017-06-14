@@ -1,21 +1,29 @@
 import {Injectable} from '@angular/core';
-import {Subject} from "rxjs/Subject";
 import {Product} from "./products/product";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {Http} from "@angular/http";
 
 @Injectable()
 export class ProductsService {
-  private selectedProduct = new Product();
+  private products$;
 
-  constructor() {
+  constructor(private http: Http) {
+    this.products$ = http.get('http://localhost:3000/products')
+      .map(res => res.json());
+      // .subscribe(data => {
+      //     this.products = data;
+      //     this.products.forEach(a => a.imagePath = "http://localhost:3000/product/" + a._id + "/" + a.imagePath)
+      //   },
+      //   err => console.log(err),
+      //   () => console.log('success'));
   }
 
-  getSelectedProduct() {
-    return this.selectedProduct;
+  getProduct(index: string) {
+    console.log("getProduct");
+    return this.products$.map(products => products.filter(a => a._id == index)[0]);
   }
 
-  setSelectedProduct(product: Product) {
-    console.log(product);
-    this.selectedProduct = product;
+  getProducts() {
+    console.log("getProducts");
+    return this.products$;
   }
 }
