@@ -9,6 +9,7 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {ProductsComponent} from './products/products.component';
 import {RouterModule, Routes} from "@angular/router";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {ProductsService} from "./products.service";
 
 const appRoutes: Routes = [
   {path: '', component: ProductsComponent},
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
