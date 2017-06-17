@@ -22,7 +22,7 @@ export class ProductDetailComponent implements OnInit {
       this.id = params['id']; // (+) converts string 'id' to a number
       this.productService.getProduct(this.id)
       .subscribe(data => {
-          this.product = data;
+          this.product = data.json();
         },
         err => console.log(err),
         () => console.log('success'));

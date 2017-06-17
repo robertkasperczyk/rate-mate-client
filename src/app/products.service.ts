@@ -6,7 +6,7 @@ export class ProductsService {
   private products$;
 
   constructor(private http: Http) {
-    this.products$ = http.get('http://localhost:3000/products/page/1')
+    this.products$ = http.get('http://localhost:3000/products/page/')
       .map(res => res.json());
     // .subscribe(data => {
     //     this.products = data;
@@ -18,7 +18,7 @@ export class ProductsService {
 
   getProduct(index: string) {
     console.log("getProduct");
-    return this.products$.map(products => products.filter(a => a._id == index)[0]);
+    return this.http.get('http://localhost:3000/product/' + index);
   }
 
   getProducts(pageNumber: number) {
