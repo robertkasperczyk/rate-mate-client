@@ -1,4 +1,9 @@
-<div class="container product-container" (click)="onProductClicked(i)" *ngFor="let product of products, let i = index">
+<div class="container product-container" (click)="onProductClicked(i)"
+     infiniteScroll
+     [infiniteScrollDistance]="100"
+     [infiniteScrollThrottle]="1500"
+     (scrolled)="onScroll()"
+     *ngFor="let product of products, let i = index">
   <img [src]="product.imagePath">
   {{product.name}}
 </div>
