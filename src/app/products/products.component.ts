@@ -14,6 +14,8 @@ export class ProductsComponent implements OnInit {
   products: Array<Product>;
   scrollingIndex: number;
   endOfData: boolean;
+  boolVariables: Array<boolean>;
+  lastActive:number;
 
   constructor(private http: Http, private router: Router, private productService: ProductsService) {
   }
@@ -21,6 +23,9 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.scrollingIndex = 2;
     this.endOfData = false;
+    this.boolVariables = new Array();
+    this.lastActive = -1;
+    this.boolVariables.forEach(element => element = false);
     this.productService.getProducts(1)
       .subscribe(data => {
           this.products = data;
@@ -31,7 +36,11 @@ export class ProductsComponent implements OnInit {
   }
 
   onProductClicked(index) {
-    this.router.navigate(["/product", this.products[index]._id]);
+    if (this.lastActive !== -1) {
+      this.boolVariables[this.lastActive] = !this.boolVariables[this.lastActive];
+    }
+    this.boolVariables[index] = !this.boolVariables[index];
+    this.lastActive = index;
   }
 
   onScroll() {

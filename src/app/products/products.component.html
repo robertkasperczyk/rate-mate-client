@@ -1,9 +1,19 @@
+<body>
 <div class="container product-container" (click)="onProductClicked(i)"
      infiniteScroll
      [infiniteScrollDistance]="100"
      [infiniteScrollThrottle]="1500"
      (scrolled)="onScroll()"
      *ngFor="let product of products, let i = index">
-  <img [src]="product.imagePath">
-  {{product.name}}
+  <div class="list_item">
+    <img *ngIf="!boolVariables[i]" class="item_accordion" [src]="product.imagePath">
+    {{product.name}}
+  </div>
+  <div></div>
+  <div class="accordion_item" *ngIf="boolVariables[i]">
+    <img [src]="product.imagePath">
+    <br>
+    {{product.description}}
+  </div>
 </div>
+</body>
