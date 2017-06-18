@@ -10,7 +10,6 @@ import {FooterComponent} from './footer/footer.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {ProductsComponent} from './products/products.component';
 import {RouterModule, Routes} from "@angular/router";
-import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {ProductsService} from "./products.service";
 import { HomeComponent } from './home/home.component';
 import { AddProductComponent } from './add-product/add-product.component';
@@ -27,7 +26,6 @@ const appRoutes: Routes = [
     FooterComponent,
     NavbarComponent,
     ProductsComponent,
-    ProductDetailComponent,
     HomeComponent,
     AddProductComponent
   ],
