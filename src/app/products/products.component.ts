@@ -4,7 +4,7 @@ import "rxjs/add/operator/map";
 import {Product} from "./product";
 import {Router} from "@angular/router"
 import {ProductsService} from "../products.service";
-import {isUndefined} from "util";
+import {Comment} from "./comment";
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -12,6 +12,7 @@ import {isUndefined} from "util";
 })
 export class ProductsComponent implements OnInit {
   products: Array<Product>;
+  comments: Array<Comment>;
   scrollingIndex: number;
   endOfData: boolean;
   boolVariables: Array<boolean>;
@@ -36,6 +37,12 @@ export class ProductsComponent implements OnInit {
   }
 
   onProductClicked(index) {
+    this.productService.getProductComments(this.products[index]._id)
+      .subscribe(data => {
+        this.comments = data;
+      },
+        err => console.log(err),
+        () => console.log('succes'));
     if (this.lastActive !== -1) {
       this.boolVariables[this.lastActive] = !this.boolVariables[this.lastActive];
     }

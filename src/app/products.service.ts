@@ -21,6 +21,11 @@ export class ProductsService {
     return this.http.get('http://localhost:3000/product/' + index);
   }
 
+  getProductComments(productID: string) {
+    return this.http.get('http://localhost:3000/product/' + productID + '/comments')
+      .map(data => data.json());
+  }
+
   getProducts(pageNumber: number) {
     console.log("getProducts");
     return this.http.get('http://localhost:3000/products/page/' + pageNumber)

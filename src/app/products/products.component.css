@@ -5,6 +5,16 @@ body {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/upfeathers.png");
 }
 
+.panel-success {
+  border-radius: 0;
+  border-color: #13340c;
+}
+
+.panel-heading {
+  background-color: #13340c;
+  color: #87b02d;
+}
+
 .list_item {
   background-color: #13340c;
   color: #458d21;
