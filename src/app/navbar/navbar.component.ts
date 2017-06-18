@@ -12,4 +12,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  hover_elem='nav_elem_hover'
+
 }

@@ -12,9 +12,10 @@ import {ProductsComponent} from './products/products.component';
 import {RouterModule, Routes} from "@angular/router";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {ProductsService} from "./products.service";
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  {path: '', component: ProductsComponent},
+  {path: '', component: HomeComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'product/:id', component: ProductDetailComponent},
 ];
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     FooterComponent,
     NavbarComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,65 @@
-.navbar{
-  background-color: #306435;
-  border: none;
-  border-radius: 0px;
+a {
+  color: #13340c;
+}
+
+#menu {
+  position: absolute;
+  bottom: 1px;
+  right: 16px;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+  color: #13340c;
+  background-color: #cfff44;
+}
+
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #13340c;
+  border: 0;
+  font-size: 13px;
+  letter-spacing: 4px;
+  opacity: 0.9;
+  border-radius: 0;
+}
+
+.navbar-header {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  color: #13340c;
+  background-color: #cfff44;
+}
+
+.navbar-nav li a:hover {
+  color: #fafbff !important;
+}
+
+.navbar-default .navbar-nav li a {
+  color: #458d21;
+}
+
+.navbar-default .navbar-nav li a:focus {
+  color: #13340c;
+  background-color: #cfff44;
+}
+
+#company_image {
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 1s, height 1s, transform 1s;
+}
+
+#company_image:hover {
+  width: 300px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
