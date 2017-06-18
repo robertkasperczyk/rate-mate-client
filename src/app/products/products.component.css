@@ -8,9 +8,16 @@ body {
 .list_item {
   background-color: #13340c;
   color: #458d21;
-  padding: 0px 20px 0px 20px;
-  font-size: 18px;
+  padding: 0px 25px 0px 25px;
+  font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.div_description {
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .product-container{
@@ -21,15 +28,21 @@ body {
   margin-right: 0%;
 }
 
+.div_image {
+  float:left;
+}
+
 .accordion_item {
   position: relative;
   text-align: center;
   display: inline-block;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  margin: 25px;
+  overflow: hidden;
 }
 
 .item_accordion {
-  width: 300px;
+  width: 250px;
   height: auto;
 }
