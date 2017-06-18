@@ -28,7 +28,7 @@
       {{product.tasteRating}}
     </div>
     <br>
-    <div class="div_comments" *ngFor="let comment of comments">
+    <div *ngFor="let comment of comments">
       <div class="panel panel-success">
         <div class="panel-heading">{{comment.username}}<br>{{comment.date}}</div>
         <div class="panel-body">{{comment.comment}}</div>
