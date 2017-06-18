@@ -1,3 +1,19 @@
-<p>
-  add-product works!
-</p>
+<body>
+<div class="container">
+  <h2>
+    Add new product
+  </h2>
+  <form class="add_product_form">
+    <div class="form-group">
+      <label for="description">Name:</label>
+      <input class="form-control add_product_form" rows="5" id="name">
+      <br>
+    <input class="form-control add_product_form" type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".jpg, .png">
+      <br>
+      <label for="description">Description:</label>
+      <textarea class="form-control add_product_form" rows="5" id="description"></textarea>
+    </div>
+    <button type="submit" id="submit_button" class="btn btn-success">Submit</button>
+  </form>
+</div>
+</body>

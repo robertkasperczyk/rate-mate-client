@@ -1,0 +1,41 @@
+body {
+  font: 400 13px/1.8 Montserrat, sans-serif;
+  letter-spacing: 4px;
+  color: #13340c;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/upfeathers.png");
+}
+
+div {
+  text-align: center;
+  background-color: #458d21;
+  border: none;
+  padding: 30px 15px 30px 15px;
+}
+
+label {
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+#submit_button {
+  border-radius: 0;
+  border: none;
+  background-color: #13340c;
+}
+
+input {
+  color: #024814;
+}
+
+.add_product_form {
+  border-radius: 0;
+  letter-spacing: 3px;
+  border-color: #458d21;
+  width: 70%;
+  margin: auto;
+}
+
+.add_product_form:focus {
+  border-color: #024814;
+
+}
