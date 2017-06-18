@@ -21,18 +21,22 @@ body {
 
 #second_parallax {
   background-image: url('https://s-media-cache-ak0.pinimg.com/originals/49/d3/da/49d3da1805082e9d2324be7c7e54c698.jpg');
-
+  opacity: 0.9;
   min-height: 500px;
 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#second_parallax:hover {
+  opacity: 1;
 }
 
 #third_parallax {
   background-image: url('https://cdn.shopify.com/s/files/1/1426/7538/products/IMG_0339.JPG?v=1485135901');
-
+  opacity: 0.9;
   min-height: 500px;
 
   background-attachment: fixed;
@@ -41,3 +45,45 @@ body {
   background-size: cover;
 }
 
+#third_parallax:hover {
+  opacity: 1;
+}
+
+.container {
+  position: relative;
+}
+
+.elem {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #13340c;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
