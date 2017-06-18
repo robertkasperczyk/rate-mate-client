@@ -1,0 +1,43 @@
+body {
+  font: 400 13px/1.8 Montserrat, sans-serif;
+  letter-spacing: 4px;
+  color: #13340c
+}
+
+#first_parallax {
+  background-image: url('http://pampatea.com/wp-content/uploads/2016/06/2-2.jpg');
+  opacity: 0.9;
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#first_parallax:hover {
+  opacity: 1;
+}
+
+#second_parallax {
+  background-image: url('https://s-media-cache-ak0.pinimg.com/originals/49/d3/da/49d3da1805082e9d2324be7c7e54c698.jpg');
+
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#third_parallax {
+  background-image: url('https://cdn.shopify.com/s/files/1/1426/7538/products/IMG_0339.JPG?v=1485135901');
+
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
