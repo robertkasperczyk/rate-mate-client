@@ -5,9 +5,9 @@
     </div>
     <div id="menu">
       <ul class="nav navbar-nav">
-        <li><a routerLink="/">HOME</a></li>
-        <li><a routerLink="/products">PRODUCTS</a></li>
-        <li><a routerLink="/add-product">ADD PRODUCT</a></li>
+        <li [class.active]="router.url==='/'"><a routerLink="/">HOME</a></li>
+        <li [class.active]="router.url==='/products'"><a routerLink="/products">PRODUCTS</a></li>
+        <li [class.active]="router.url==='/add-product'"><a routerLink="/add-product">ADD PRODUCT</a></li>
       </ul>
     </div>
   </div>
