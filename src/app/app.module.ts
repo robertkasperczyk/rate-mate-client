@@ -13,11 +13,12 @@ import {RouterModule, Routes} from "@angular/router";
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {ProductsService} from "./products.service";
 import { HomeComponent } from './home/home.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'products', component: ProductsComponent},
-  {path: 'product/:id', component: ProductDetailComponent},
+  {path: 'add-product', component: AddProductComponent},
 ];
 
 @NgModule({
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     ProductsComponent,
     ProductDetailComponent,
-    HomeComponent
+    HomeComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
