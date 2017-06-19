@@ -59,7 +59,7 @@ export class ProductsComponent implements OnInit {
 
             this.endOfData = data.length == 0;
 
-            if (!this.endOfData && data[1]._id != this.products[this.products.length - 1]._id) {
+            if (!this.endOfData && data[0]._id != this.products[this.products.length - 2]._id) {
               data.forEach(a => a.imagePath = "http://localhost:3000/product/" + a._id + "/" + a.imagePath);
               this.products = this.products.concat(data);
             }

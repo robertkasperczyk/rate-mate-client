@@ -31,4 +31,5 @@ export class ProductsService {
     return this.http.get('http://localhost:3000/products/page/' + pageNumber)
       .map(res => res.json());
   }
+
 }

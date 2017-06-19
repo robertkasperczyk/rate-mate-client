@@ -13,6 +13,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {ProductsService} from "./products.service";
 import { HomeComponent } from './home/home.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import {FileSelectDirective} from "ng2-file-upload";
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,14 +28,15 @@ const appRoutes: Routes = [
     NavbarComponent,
     ProductsComponent,
     HomeComponent,
-    AddProductComponent
+    AddProductComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    InfiniteScrollModule
+    InfiniteScrollModule,
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

@@ -6,14 +6,17 @@
   <form class="add_product_form">
     <div class="form-group">
       <label for="description">Name:</label>
-      <input class="form-control add_product_form" rows="5" id="name">
+      <input class="form-control add_product_form" [(ngModel)]="name" rows="5" id="name"
+             [ngModelOptions]="{standalone: true}">
       <br>
-    <input class="form-control add_product_form" type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".jpg, .png">
+      <input class="form-control add_product_form" type="file" ng2FileSelect [uploader]="uploader"/>
+
       <br>
       <label for="description">Description:</label>
-      <textarea class="form-control add_product_form" rows="5" id="description"></textarea>
+      <textarea class="form-control add_product_form" [(ngModel)]="description" rows="5" id="description"
+                [ngModelOptions]="{standalone: true}"></textarea>
     </div>
-    <button type="submit" id="submit_button" class="btn btn-success">Submit</button>
+    <button type="submit" id="submit_button" class="btn btn-success" (click)="upload()">Submit</button>
   </form>
 </div>
 </body>
