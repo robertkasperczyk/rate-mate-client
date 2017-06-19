@@ -37,14 +37,14 @@ export class ProductsComponent implements OnInit {
   }
 
   onProductClicked(index) {
-    this.productService.getProductComments(this.products[index]._id)
-      .subscribe(data => {
-        this.comments = data;
-      },
-        err => console.log(err),
-        () => console.log('succes'));
-    if (this.lastActive !== -1) {
+    if (this.lastActive !== -1 && this.lastActive !== index) {
       this.boolVariables[this.lastActive] = !this.boolVariables[this.lastActive];
+      this.productService.getProductComments(this.products[index]._id)
+        .subscribe(data => {
+            this.comments = data;
+          },
+          err => console.log(err),
+          () => console.log('succes'));
     }
     this.boolVariables[index] = !this.boolVariables[index];
     this.lastActive = index;
