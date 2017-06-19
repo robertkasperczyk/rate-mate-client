@@ -50,7 +50,7 @@ export class ProductsComponent implements OnInit {
     else {
       this.comments = new Array();
     }
-    this.boolVariables[this.lastActive] = !this.boolVariables[this.lastActive];
+    this.boolVariables[this.lastActive] = false;
     this.lastActive = index;
   }
 
