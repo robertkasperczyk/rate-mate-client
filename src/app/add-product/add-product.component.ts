@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  private uploader: FileUploader = new FileUploader({url: "http://localhost:3000/new-product/file"});
+  private uploader: FileUploader = new FileUploader({url: 'http://localhost:3000/product/add'});
   private name: String;
   private description: String;
 

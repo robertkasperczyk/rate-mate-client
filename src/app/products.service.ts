@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http} from "@angular/http";
+import {Http} from '@angular/http';
 
 @Injectable()
 export class ProductsService {
@@ -17,7 +17,7 @@ export class ProductsService {
   }
 
   getProduct(index: string) {
-    console.log("getProduct");
+    console.log('getProduct');
     return this.http.get('http://localhost:3000/product/' + index);
   }
 
@@ -27,9 +27,8 @@ export class ProductsService {
   }
 
   getProducts(pageNumber: number) {
-    console.log("getProducts");
-    return this.http.get('http://localhost:3000/products/page/' + pageNumber)
-      .map(res => res.json());
+    console.log('getProducts');
+    return this.http.get('http://localhost:3000/products/list', {params: {page: pageNumber, onPage: 5}}).map(res => res.json());
   }
 
 }

@@ -24,13 +24,13 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.scrollingIndex = 2;
     this.endOfData = false;
-    this.boolVariables = new Array();
+    this.boolVariables = [];
     this.lastActive = -1;
     this.boolVariables.forEach(element => element = false);
     this.productService.getProducts(1)
       .subscribe(data => {
           this.products = data;
-          this.products.forEach(a => a.imagePath = "http://localhost:3000/product/" + a._id + "/" + a.imagePath)
+          this.products.forEach(a => a.imagePath = 'http://localhost:3000/product/' + a.id + '/image');
         },
         err => console.log(err),
         () => console.log('success'));
@@ -40,15 +40,14 @@ export class ProductsComponent implements OnInit {
     console.log('x');
     if (this.lastActive !== index) {
       this.boolVariables[index] = !this.boolVariables[index];
-      this.productService.getProductComments(this.products[index]._id)
+      this.productService.getProductComments(this.products[index].id)
         .subscribe(data => {
             this.comments = data;
           },
           err => console.log(err),
           () => console.log('success'));
-    }
-    else {
-      this.comments = new Array();
+    } else {
+      this.comments = [];
     }
     this.boolVariables[this.lastActive] = false;
     this.lastActive = index;
@@ -61,10 +60,10 @@ export class ProductsComponent implements OnInit {
             this.scrollingIndex += 1;
 
 
-            this.endOfData = data.length == 0;
+            this.endOfData = data.length === 0;
 
-            if (!this.endOfData && data[0]._id != this.products[this.products.length - 2]._id) {
-              data.forEach(a => a.imagePath = "http://localhost:3000/product/" + a._id + "/" + a.imagePath);
+            if (!this.endOfData && data[0].id !== this.products[this.products.length - 2].id) {
+              data.forEach(a => a.imagePath = 'http://localhost:3000/product/' + a.id + '/image');
               this.products = this.products.concat(data);
             }
           },
