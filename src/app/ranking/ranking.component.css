@@ -15,12 +15,13 @@ body {
   alignment: center;
   margin-bottom: 10px;
   border-color: #cfff44;
+  overflow: hidden;
 }
 
 .div_description {
   font-size: 18px;
   float: left;
-  vertical-align: middle;
+  vertical-align: center;
 }
 
 .div_position {
@@ -36,11 +37,13 @@ body {
   vertical-align: middle;
 }
 
-.div_name span {
-  display: inline-block;
-  vertical-align: center;
+.div_name {
+  display: block;
+  text-align: center;
   margin-left: 20px;
   line-height: normal;
+  font-size: 20px;
+  float:left;
 }
 
 .container {
@@ -58,7 +61,7 @@ body {
 }
 
 .header {
-  padding: 60px;
+  padding: 40px;
   text-align: center;
   background: #2e4617;
   color: white;

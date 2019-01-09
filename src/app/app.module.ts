@@ -17,6 +17,7 @@ import {FileSelectDirective} from 'ng2-file-upload';
 import {RankingComponent} from './ranking/ranking.component';
 import {SearchResultsComponent} from './search-results/search-results.component';
 import {SearchService} from './service/search.service';
+import {UsersComponent} from './users/users.component';
 
 
 const appRoutes: Routes = [
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   {path: 'add-product', component: AddProductComponent},
   {path: 'ranking', component: RankingComponent},
   {path: 'search-results', component: SearchResultsComponent},
+  {path: 'users', component: UsersComponent},
 ];
 
 @NgModule({
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     AddProductComponent,
     FileSelectDirective,
     RankingComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

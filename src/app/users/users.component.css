@@ -1,0 +1,45 @@
+body {
+  font: 400 13px/1.8 Montserrat, sans-serif;
+  letter-spacing: 4px;
+  color: #13340c;
+  alignment: center;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/upfeathers.png");
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin: 10px;
+  alignment: center;
+}
+
+.container span {
+  font-size: 20px;
+  alignment: center;
+}
+
+.container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  text-align: center;
+  alignment: center;
+}
+
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #37c101;
+  color: #103801;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.user-container {
+  alignment: center;
+  border-color: #827f84;
+  overflow: hidden;
+  margin: auto;
+}

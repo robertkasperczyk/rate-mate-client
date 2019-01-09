@@ -5,7 +5,7 @@
       <img [src]="product.imagePath">
       <br>
       <br>
-      <div class="div_description">
+      <div class="div_description" *ngIf="!isEditMode">
         {{product.name}}
         <br>
         <br>
@@ -23,26 +23,43 @@
         <br>
         <br>
         <div>
+          <button type="submit" id="edit_button" class="btn btn-success" (click)="onEditClicked(i)">Edit
+          </button>
+        </div>
+        <div>
           <button type="submit" id="delete_button" class="btn btn-success" (click)="onRemoveProductClicked(i)">Delete
           </button>
         </div>
         <br>
-        <div *ngFor="let comment of product.comments">
-          <div class="panel panel-success">
-            <div class="panel-heading">Dust rating: {{comment.dustRating}}<br>Power rating: {{comment.powerRating}}<br> Taste rating: {{comment.tasteRating}}</div>
-            <div class="panel-body">{{comment.content}}</div>
+        <div *ngFor="let comment of product.comments, let j = index">
+          <div class="panel">
+            <div class="panel-heading">{{comment.username}}<br>{{comment.date}}</div>
+            <div class="panel-body">
+              Dust rating: {{comment.dustRating}}<br>Power rating: {{comment.powerRating}}<br> Taste
+              rating: {{comment.tasteRating}}
+              <br>
+              {{comment.content}}</div>
+          </div>
+          <div>
+            <button type="submit" id="delete_comment_button" class="btn btn-success"
+                    (click)="onRemoveCommentClicked(i, j)">Delete
+            </button>
           </div>
         </div>
         <form class="add_comment_form">
           <div class="form-group">
+            <label for="username">Username:</label>
+            <textarea name="content" class="form-control add_product_form" [(ngModel)]="usernames[i]" rows="1"
+                      id="username"></textarea>
             <label for="comment">Comment:</label>
-            <textarea name="content" class="form-control add_product_form" [(ngModel)]="contents[i]"  rows="5" id="comment"></textarea>
+            <textarea name="content" class="form-control add_product_form" [(ngModel)]="contents[i]" rows="5"
+                      id="comment"></textarea>
             <br>
             <label for="dust_rating">Dust rating:</label>
             <select name="dust" id="dust_rating" [(ngModel)]="dusts[i]">
               <option value="1">1</option>
               <option value="2">2</option>
-              <option value="3">3</option>
+              <option value="3" selected>3</option>
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
@@ -50,7 +67,7 @@
             <select name="power" id="power_rating" [(ngModel)]="powers[i]">
               <option value="1">1</option>
               <option value="2">2</option>
-              <option value="3">3</option>
+              <option value="3" selected>3</option>
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
@@ -63,8 +80,24 @@
               <option value="5">5</option>
             </select>
           </div>
-          <button type="submit" id="add_comment_button" class="btn btn-success" (click)="onAddCommentClicked(i)">Add comment
+          <button type="submit" id="add_comment_button" class="btn btn-success"
+                  (click)="onAddCommentClicked(i); contents[i] = ''; usernames[i] = ''">Add comment
           </button>
+        </form>
+      </div>
+      <div class=div_description *ngIf="isEditMode">
+        <form class="edit_product_form">
+          <div class="form-group">
+            <label for="description">Name:</label>
+            <input class="form-control edit_product_form" [(ngModel)]="name" rows="5" id="name"
+                      [ngModelOptions]="{standalone: true}">
+            <br>
+            <label for="description">Description:</label>
+            <textarea class="form-control edit_product_form" [(ngModel)]="description" rows="5" id="description"
+                      [ngModelOptions]="{standalone: true}">
+            </textarea>
+          </div>
+          <button type="submit" id="edit_button" class="btn btn-success" (click)="onEditClicked(i)">Edit</button>
         </form>
       </div>
     </div>

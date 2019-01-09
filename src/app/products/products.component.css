@@ -11,16 +11,6 @@ div {
   border: none;
 }
 
-.panel-success {
-  border-radius: 0;
-  border-color: #13340c;
-}
-
-.panel-heading {
-  background-color: #13340c;
-  color: #87b02d;
-}
-
 .list_item {
   background-color: #13340c;
   color: #458d21;
@@ -43,46 +33,19 @@ div {
   width: 300px;
 }
 
-.add_comment_form {
-  border-radius: 0;
-  letter-spacing: 3px;
-  border-color: #458d21;
-  width: 70%;
-  alignment: center;
-  margin: auto;
-}
-
-#delete_button {
-  border-radius: 0;
-  border: none;
-  background-color: #13340c;
-}
-
-#add_comment_button {
-  border-radius: 0;
-  border: none;
-  background-color: #13340c;
-}
-
 .div_description {
   text-align: center;
-  float: bottom;
-  margin: auto;
-  padding: 20px;
-  overflow: hidden;
+  background: #deecc6;
+  padding: 15px;
+  alignment: center;
+  word-wrap: break-word;      /* IE */
 }
 
 .product-container{
-  padding:20px 0px 30px 0px;
-  width: 60%;
+  padding:20px 20px 20px 20px;
   alignment: center;
   border-width: 10px;
   border-color: #cfff44;
-}
-
-.div_image {
-  float:left;
-  height: 400px;
 }
 
 .accordion_item {
@@ -91,12 +54,5 @@ div {
   overflow: hidden;
   alignment: center;
   width: 70%;
-  alignment: center;
   transition: max-height 0.2s ease-out;
-}
-
-.item_accordion {
-  width: auto;
-  alignment: center;
-  height: auto;
 }

@@ -19,6 +19,16 @@ body {
   margin: auto;
   padding: 20px;
   overflow: hidden;
+  word-wrap: break-word;
+}
+
+.panel {
+  word-wrap: break-word;
+}
+
+.panel-heading {
+  background: #024814;
+  color: #deecc6;
 }
 
 .product {
@@ -45,8 +55,4 @@ body {
   width: 35%;
   margin: auto;
   padding: 35px;
-}
-
-.panel-success {
-  color: black;
 }
