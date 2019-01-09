@@ -53,9 +53,20 @@ a {
   background-color: #cfff44;
 }
 
+.pull-right {
+  float: right;
+  border-radius: 0;
+}
+
 #company_image {
   -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
   transition: width 1s, height 1s, transform 1s;
+}
+
+.submit_button {
+  border-radius: 0;
+  border: #cfff44;
+  background-color: #87b02d;
 }
 
 #company_image:hover {

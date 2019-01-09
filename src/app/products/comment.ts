@@ -1,5 +1,8 @@
 export class Comment {
   username: string;
   date: string;
-  comment: string;
+  content: string;
+  powerRating: number;
+  dustRating: number;
+  tasteRating: number;
 }

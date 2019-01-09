@@ -1,0 +1,28 @@
+<body>
+<div class="header">
+  <h1>Ranking</h1>
+  <p>There you can find best products in order</p>
+</div>
+<div class="container product-container"
+     *ngFor="let product of products, let i = index">
+  <div class="div_position">
+    {{i+1}}
+  </div>
+  <div class="div_image">
+    <img [src]="product.imagePath">
+  </div>
+  <div class="div_description">
+    <label>Dust rating:</label>
+    {{product.dustRating}}
+    <br>
+    <label>Power rating:</label>
+    {{product.powerRating}}
+    <br>
+    <label>Taste rating:</label>
+    {{product.tasteRating}}
+  </div>
+  <div class="div_name">
+    <span>{{product.name}}</span>
+  </div>
+</div>
+</body>

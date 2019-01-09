@@ -9,16 +9,22 @@ import {AppComponent} from './app.component';
 import {FooterComponent} from './footer/footer.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {ProductsComponent} from './products/products.component';
-import {RouterModule, Routes} from "@angular/router";
-import {ProductsService} from "./products.service";
+import {RouterModule, Routes} from '@angular/router';
+import {ProductsService} from './service/products.service';
 import { HomeComponent } from './home/home.component';
 import { AddProductComponent } from './add-product/add-product.component';
-import {FileSelectDirective} from "ng2-file-upload";
+import {FileSelectDirective} from 'ng2-file-upload';
+import {RankingComponent} from './ranking/ranking.component';
+import {SearchResultsComponent} from './search-results/search-results.component';
+import {SearchService} from './service/search.service';
+
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'add-product', component: AddProductComponent},
+  {path: 'ranking', component: RankingComponent},
+  {path: 'search-results', component: SearchResultsComponent},
 ];
 
 @NgModule({
@@ -29,7 +35,9 @@ const appRoutes: Routes = [
     ProductsComponent,
     HomeComponent,
     AddProductComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    RankingComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     InfiniteScrollModule,
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

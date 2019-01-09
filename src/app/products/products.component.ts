@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {Http} from "@angular/http";
-import "rxjs/add/operator/map";
-import {Product} from "./product";
-import {Router} from "@angular/router"
-import {ProductsService} from "../products.service";
-import {Comment} from "./comment";
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+import {Product} from './product';
+import {Router} from '@angular/router'
+import {ProductsService} from '../service/products.service';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -12,11 +12,10 @@ import {Comment} from "./comment";
 })
 export class ProductsComponent implements OnInit {
   products: Array<Product>;
-  comments: Array<Comment>;
   scrollingIndex: number;
   endOfData: boolean;
   boolVariables: Array<boolean>;
-  lastActive:number;
+  lastActive: number;
 
   constructor(private http: Http, private router: Router, private productService: ProductsService) {
   }
@@ -40,16 +39,12 @@ export class ProductsComponent implements OnInit {
     console.log('x');
     if (this.lastActive !== index) {
       this.boolVariables[index] = !this.boolVariables[index];
-      this.productService.getProductComments(this.products[index].id)
-        .subscribe(data => {
-            this.comments = data;
-          },
-          err => console.log(err),
-          () => console.log('success'));
-    } else {
-      this.comments = [];
     }
-    this.boolVariables[this.lastActive] = false;
+    if (this.lastActive === index) {
+      this.boolVariables[this.lastActive] = !this.boolVariables[this.lastActive];
+    } else {
+      this.boolVariables[this.lastActive] = false;
+    }
     this.lastActive = index;
   }
 

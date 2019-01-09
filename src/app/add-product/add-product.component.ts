@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FileUploader} from 'ng2-file-upload';
-import {ProductsService} from '../products.service';
+import {ProductsService} from '../service/products.service';
 import {Router} from '@angular/router';
 
 @Component({

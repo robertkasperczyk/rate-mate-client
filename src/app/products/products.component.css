@@ -5,6 +5,12 @@ body {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/upfeathers.png");
 }
 
+div {
+  text-align: center;
+  background-color: #458d21;
+  border: none;
+}
+
 .panel-success {
   border-radius: 0;
   border-color: #13340c;
@@ -18,13 +24,49 @@ body {
 .list_item {
   background-color: #13340c;
   color: #458d21;
-  padding: 0px 25px 0px 25px;
-  font-size: 20px;
+  border: 5px;
+  border-color: #2e4617;
+  border-radius: 3px;
+  alignment: center;
+  padding: 25px 25px 25px 25px;
+  margin-left: 250px;
+  margin-right: 250px;
+  text-align: center;
+  font-size: 22px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list_item img {
+  display: block;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+}
+
+.add_comment_form {
+  border-radius: 0;
+  letter-spacing: 3px;
+  border-color: #458d21;
+  width: 70%;
+  alignment: center;
+  margin: auto;
+}
+
+#delete_button {
+  border-radius: 0;
+  border: none;
+  background-color: #13340c;
+}
+
+#add_comment_button {
+  border-radius: 0;
+  border: none;
+  background-color: #13340c;
 }
 
 .div_description {
   text-align: center;
+  float: bottom;
   margin: auto;
   padding: 20px;
   overflow: hidden;
@@ -32,27 +74,29 @@ body {
 
 .product-container{
   padding:20px 0px 30px 0px;
-  width: 100%;
-  font-size: 15px;
-  margin-left: 0%;
-  margin-right: 0%;
+  width: 60%;
+  alignment: center;
+  border-width: 10px;
+  border-color: #cfff44;
 }
 
 .div_image {
   float:left;
+  height: 400px;
 }
 
 .accordion_item {
-  position: relative;
   text-align: center;
   display: inline-block;
   overflow: hidden;
+  alignment: center;
+  width: 70%;
+  alignment: center;
   transition: max-height 0.2s ease-out;
-  margin: 15px;
-  overflow: hidden;
 }
 
 .item_accordion {
-  width: 250px;
+  width: auto;
+  alignment: center;
   height: auto;
 }

@@ -6,4 +6,5 @@ export class Product {
   powerRating: number;
   dustRating: number;
   tasteRating: number;
+  comments: Array<Comment>;
 }

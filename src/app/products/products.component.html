@@ -7,7 +7,7 @@
      *ngFor="let product of products, let i = index">
   <div class="list_item">
     <img *ngIf="!boolVariables[i]" class="item_accordion" [src]="product.imagePath">
-    {{product.name}}
+    <p>{{product.name}}</p>
   </div>
   <div class="accordion_item" *ngIf="boolVariables[i]">
     <div class="div_image">
@@ -26,13 +26,6 @@
       <br>
       <label>Taste rating:</label>
       {{product.tasteRating}}
-    </div>
-    <br>
-    <div *ngFor="let comment of comments">
-      <div class="panel panel-success">
-        <div class="panel-heading">{{comment.username}}<br>{{comment.date}}</div>
-        <div class="panel-body">{{comment.comment}}</div>
-      </div>
     </div>
   </div>
 </div>

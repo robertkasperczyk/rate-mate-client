@@ -1,0 +1,73 @@
+<body>
+<div class="container">
+  <div *ngFor="let product of products, let i = index">
+    <div class="product">
+      <img [src]="product.imagePath">
+      <br>
+      <br>
+      <div class="div_description">
+        {{product.name}}
+        <br>
+        <br>
+        {{product.description}}
+        <br>
+        <br>
+        <label>Dust rating:</label>
+        {{product.dustRating}}
+        <br>
+        <label>Power rating:</label>
+        {{product.powerRating}}
+        <br>
+        <label>Taste rating:</label>
+        {{product.tasteRating}}
+        <br>
+        <br>
+        <div>
+          <button type="submit" id="delete_button" class="btn btn-success" (click)="onRemoveProductClicked(i)">Delete
+          </button>
+        </div>
+        <br>
+        <div *ngFor="let comment of product.comments">
+          <div class="panel panel-success">
+            <div class="panel-heading">Dust rating: {{comment.dustRating}}<br>Power rating: {{comment.powerRating}}<br> Taste rating: {{comment.tasteRating}}</div>
+            <div class="panel-body">{{comment.content}}</div>
+          </div>
+        </div>
+        <form class="add_comment_form">
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea name="content" class="form-control add_product_form" [(ngModel)]="contents[i]"  rows="5" id="comment"></textarea>
+            <br>
+            <label for="dust_rating">Dust rating:</label>
+            <select name="dust" id="dust_rating" [(ngModel)]="dusts[i]">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="power_rating">Power rating:</label>
+            <select name="power" id="power_rating" [(ngModel)]="powers[i]">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label for="taste_rating">Taste rating:</label>
+            <select name="taste" id="taste_rating" [(ngModel)]="tastes[i]">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <button type="submit" id="add_comment_button" class="btn btn-success" (click)="onAddCommentClicked(i)">Add comment
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

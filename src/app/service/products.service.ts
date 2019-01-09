@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
+import {Product} from '../products/product';
 
 @Injectable()
 export class ProductsService {
@@ -21,6 +22,10 @@ export class ProductsService {
     return this.http.get('http://localhost:3000/product/' + index);
   }
 
+  deleteProduct(index: string) {
+    return this.http.delete('http://localhost:3000/product/' + index + '/delete');
+  }
+
   getProductComments(productID: string) {
     return this.http.get('http://localhost:3000/product/' + productID + '/comments')
       .map(data => data.json());
@@ -29,6 +34,15 @@ export class ProductsService {
   getProducts(pageNumber: number) {
     console.log('getProducts');
     return this.http.get('http://localhost:3000/products/list', {params: {page: pageNumber, onPage: 5}}).map(res => res.json());
+  }
+
+  getRanking() {
+    return this.http.get('http://localhost:3000/products/ranking').map(res => res.json());
+  }
+
+  addComment(product: Product, content: string, dust: number, power: number, taste: number) {
+    return this.http.post('http://localhost:3000/product/' + product.id + '/comment/add',
+      {content: content, dustRating: dust, tasteRating: taste, powerRating: power});
   }
 
 }

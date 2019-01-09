@@ -1,0 +1,67 @@
+body {
+  font: 400 13px/1.8 Montserrat, sans-serif;
+  letter-spacing: 4px;
+  color: #13340c;
+  alignment: center;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/upfeathers.png");
+}
+
+.container span {
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.product-container {
+  alignment: center;
+  margin-bottom: 10px;
+  border-color: #cfff44;
+}
+
+.div_description {
+  font-size: 18px;
+  float: left;
+  vertical-align: middle;
+}
+
+.div_position {
+  float: left;
+  font-size: 70px;
+  text-align: center;
+  width: 100px;
+}
+
+.div_name {
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.div_name span {
+  display: inline-block;
+  vertical-align: center;
+  margin-left: 20px;
+  line-height: normal;
+}
+
+.container {
+  border: 1px solid #103801;
+  background-color: #deecc6;
+  padding: 16px;
+  alignment: center;
+}
+
+.container img {
+  float: left;
+  width: 130px;
+  height: 130px;
+  margin-right: 20px;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #2e4617;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
