@@ -42,7 +42,7 @@ export class ProductsService {
 
   getProducts(pageNumber: number) {
     console.log('getProducts');
-    return this.http.get('http://localhost:3000/products/list', {params: {page: pageNumber, onPage: 5}}).map(res => res.json());
+    return this.http.get('http://localhost:3000/products/list', {params: {page: pageNumber, onPage: 15}}).map(res => res.json());
   }
 
   getRanking() {
